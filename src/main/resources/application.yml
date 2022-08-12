@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/randomizer_db
+    username: postgres
+    password: pass
+    driver-class-name: org.postgresql.Driver
+  security:
+    user:
+      name: user
+      password: pass
+      roles:
+        - USER
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+
+application:
+  jwt:
+    expiresAt: 846_000
+    headerPrefix: "Bearer"
+    secret: "ciao"
+    headerKey: "Authorization"
